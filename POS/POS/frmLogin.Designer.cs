@@ -47,9 +47,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+
             this.SuspendLayout();
             // 
             // textBox1
@@ -119,8 +126,9 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(524, 78);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.checkBox1.Location = new System.Drawing.Point(23, 24);
+
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(98, 21);
             this.checkBox1.TabIndex = 7;
@@ -130,8 +138,9 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(524, 122);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.checkBox2.Location = new System.Drawing.Point(23, 72);
+
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(98, 21);
             this.checkBox2.TabIndex = 8;
@@ -150,8 +159,9 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(39, 32);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.checkBox3.Location = new System.Drawing.Point(23, 49);
+
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(98, 21);
             this.checkBox3.TabIndex = 10;
@@ -161,8 +171,9 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(39, 62);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.checkBox4.Location = new System.Drawing.Point(29, 102);
+
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(98, 21);
             this.checkBox4.TabIndex = 11;
@@ -247,27 +258,88 @@
             this.checkBox6.Text = "checkBox6";
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
-            // trackBar1
+
+            // label3
             // 
-            this.trackBar1.Location = new System.Drawing.Point(720, 444);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 56);
-            this.trackBar1.TabIndex = 19;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(388, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(388, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(388, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(388, 106);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "label6";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(720, 507);
+            this.textBox4.Location = new System.Drawing.Point(448, 21);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 20;
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 23;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(448, 49);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 24;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(448, 75);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 25;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(448, 102);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 26;
+
+
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 653);
+
+            this.ClientSize = new System.Drawing.Size(715, 376);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+
             this.Controls.Add(this.checkBox6);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.label2);
@@ -317,8 +389,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.TrackBar trackBar1;
+
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+
     }
 }
 
