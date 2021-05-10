@@ -1,0 +1,11 @@
+E:\My\POS\POS\bin\Debug\POS.exe.config
+E:\My\POS\POS\bin\Debug\POS.exe
+E:\My\POS\POS\bin\Debug\POS.pdb
+E:\My\POS\POS\obj\Debug\POS.csprojResolveAssemblyReference.cache
+E:\My\POS\POS\obj\Debug\POS.Properties.Resources.resources
+E:\My\POS\POS\obj\Debug\POS.csproj.GenerateResource.Cache
+E:\My\POS\POS\obj\Debug\POS.exe
+E:\My\POS\POS\obj\Debug\POS.pdb
+D:\POS project\POS\POS\bin\Debug\POS.exe.config
+D:\POS project\POS\POS\obj\Debug\POS.exe
+D:\POS project\POS\POS\obj\Debug\POS.pdb
