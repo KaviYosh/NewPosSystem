@@ -12,3 +12,6 @@ D:\POS project\POS\POS\obj\Debug\POS.pdb
 C:\Users\Sirina Dilshan\Documents\GitHub\NewPosSystem\POS\POS\bin\Debug\POS.exe.config
 C:\Users\Sirina Dilshan\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.exe
 C:\Users\Sirina Dilshan\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.pdb
+D:\Git hub\NewPosSystem\POS\POS\bin\Debug\POS.exe.config
+D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.exe
+D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.pdb
