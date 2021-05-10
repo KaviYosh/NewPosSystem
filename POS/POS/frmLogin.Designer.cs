@@ -33,62 +33,71 @@
             this.txtSignUp = new System.Windows.Forms.Button();
             this.txtLogin = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(188, 30);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(141, 24);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(188, 149);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(141, 77);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 22);
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 1;
             // 
             // txtSignUp
             // 
-            this.txtSignUp.Location = new System.Drawing.Point(188, 242);
+            this.txtSignUp.Location = new System.Drawing.Point(141, 197);
+            this.txtSignUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSignUp.Name = "txtSignUp";
-            this.txtSignUp.Size = new System.Drawing.Size(98, 35);
+            this.txtSignUp.Size = new System.Drawing.Size(74, 28);
             this.txtSignUp.TabIndex = 2;
             this.txtSignUp.Text = "Sign Up";
             this.txtSignUp.UseVisualStyleBackColor = true;
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(39, 242);
+            this.txtLogin.Location = new System.Drawing.Point(29, 197);
+            this.txtLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(98, 35);
+            this.txtLogin.Size = new System.Drawing.Size(74, 28);
             this.txtLogin.TabIndex = 3;
             this.txtLogin.Text = "Login";
             this.txtLogin.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(39, 116);
+            this.button1.Location = new System.Drawing.Point(29, 94);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 35);
+            this.button1.Size = new System.Drawing.Size(74, 28);
             this.button1.TabIndex = 4;
             this.button1.Text = "test";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(153, 121);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 5;
+            // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 321);
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.txtSignUp);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmLogin";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -103,6 +112,7 @@
         private System.Windows.Forms.Button txtSignUp;
         private System.Windows.Forms.Button txtLogin;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 
