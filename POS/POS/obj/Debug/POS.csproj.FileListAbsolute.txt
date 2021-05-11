@@ -22,3 +22,6 @@ D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.frmLogin.resources
 D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.frmSignIn.resources
 D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.Properties.Resources.resources
 D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.csproj.GenerateResource.Cache
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\bin\Debug\POS.exe.config
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.exe
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.pdb
