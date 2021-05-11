@@ -3,3 +3,8 @@ E:\My\POS\DAL\bin\Debug\DAL.pdb
 E:\My\POS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 E:\My\POS\DAL\obj\Debug\DAL.dll
 E:\My\POS\DAL\obj\Debug\DAL.pdb
+D:\Git hub\NewPosSystem\POS\DAL\bin\Debug\DAL.dll
+D:\Git hub\NewPosSystem\POS\DAL\bin\Debug\DAL.pdb
+D:\Git hub\NewPosSystem\POS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Git hub\NewPosSystem\POS\DAL\obj\Debug\DAL.dll
+D:\Git hub\NewPosSystem\POS\DAL\obj\Debug\DAL.pdb
