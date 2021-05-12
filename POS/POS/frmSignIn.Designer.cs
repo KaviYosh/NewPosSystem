@@ -59,7 +59,7 @@
             this.lblShopName.BackColor = System.Drawing.Color.Transparent;
             this.lblShopName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShopName.ForeColor = System.Drawing.Color.White;
-            this.lblShopName.Location = new System.Drawing.Point(138, 38);
+            this.lblShopName.Location = new System.Drawing.Point(140, 38);
             this.lblShopName.Name = "lblShopName";
             this.lblShopName.Size = new System.Drawing.Size(74, 29);
             this.lblShopName.TabIndex = 1;
@@ -72,7 +72,7 @@
             this.PBUserLogin.Location = new System.Drawing.Point(34, 38);
             this.PBUserLogin.Name = "PBUserLogin";
             this.PBUserLogin.Size = new System.Drawing.Size(100, 100);
-            this.PBUserLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PBUserLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBUserLogin.TabIndex = 0;
             this.PBUserLogin.TabStop = false;
             // 
