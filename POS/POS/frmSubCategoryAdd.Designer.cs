@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSubCategoryAdd));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.pbTitle = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pnPassword = new System.Windows.Forms.Panel();
-            this.cmbBoxMainCategory = new System.Windows.Forms.ComboBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblSubCategoryName = new System.Windows.Forms.Label();
-            this.lblMainCateName = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.lblMainCateName = new System.Windows.Forms.Label();
+            this.lblSubCategoryName = new System.Windows.Forms.Label();
+            this.txtSubCatName = new System.Windows.Forms.TextBox();
+            this.cmbBoxMainCategory = new System.Windows.Forms.ComboBox();
+            this.pnPassword = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).BeginInit();
@@ -59,17 +59,6 @@
             this.panel1.Size = new System.Drawing.Size(878, 94);
             this.panel1.TabIndex = 0;
             // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(239)))), ((int)(((byte)(243)))));
-            this.lblTitle.Location = new System.Drawing.Point(311, 24);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(255, 35);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Sub Category Details";
-            // 
             // pbTitle
             // 
             this.pbTitle.BackColor = System.Drawing.Color.Transparent;
@@ -80,6 +69,17 @@
             this.pbTitle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbTitle.TabIndex = 1;
             this.pbTitle.TabStop = false;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(239)))), ((int)(((byte)(243)))));
+            this.lblTitle.Location = new System.Drawing.Point(311, 24);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(255, 35);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Sub Category Details";
             // 
             // dataGridView1
             // 
@@ -97,7 +97,7 @@
             this.panel3.Controls.Add(this.btnClear);
             this.panel3.Controls.Add(this.lblMainCateName);
             this.panel3.Controls.Add(this.lblSubCategoryName);
-            this.panel3.Controls.Add(this.txtPassword);
+            this.panel3.Controls.Add(this.txtSubCatName);
             this.panel3.Controls.Add(this.cmbBoxMainCategory);
             this.panel3.Controls.Add(this.pnPassword);
             this.panel3.Location = new System.Drawing.Point(5, 3);
@@ -105,56 +105,15 @@
             this.panel3.Size = new System.Drawing.Size(345, 606);
             this.panel3.TabIndex = 6;
             // 
-            // pnPassword
+            // btnSave
             // 
-            this.pnPassword.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.pnPassword.Location = new System.Drawing.Point(19, 229);
-            this.pnPassword.Name = "pnPassword";
-            this.pnPassword.Size = new System.Drawing.Size(282, 1);
-            this.pnPassword.TabIndex = 3;
-            // 
-            // cmbBoxMainCategory
-            // 
-            this.cmbBoxMainCategory.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbBoxMainCategory.FormattingEnabled = true;
-            this.cmbBoxMainCategory.Location = new System.Drawing.Point(19, 82);
-            this.cmbBoxMainCategory.Name = "cmbBoxMainCategory";
-            this.cmbBoxMainCategory.Size = new System.Drawing.Size(282, 32);
-            this.cmbBoxMainCategory.TabIndex = 1;
-            this.cmbBoxMainCategory.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMainCategory_SelectedIndexChanged);
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Calibri", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtPassword.Location = new System.Drawing.Point(19, 186);
-            this.txtPassword.Multiline = true;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(280, 37);
-            this.txtPassword.TabIndex = 4;
-            // 
-            // lblSubCategoryName
-            // 
-            this.lblSubCategoryName.AutoSize = true;
-            this.lblSubCategoryName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubCategoryName.Location = new System.Drawing.Point(15, 141);
-            this.lblSubCategoryName.Name = "lblSubCategoryName";
-            this.lblSubCategoryName.Size = new System.Drawing.Size(174, 24);
-            this.lblSubCategoryName.TabIndex = 1;
-            this.lblSubCategoryName.Text = "Sub Category Name";
-            // 
-            // lblMainCateName
-            // 
-            this.lblMainCateName.AutoSize = true;
-            this.lblMainCateName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMainCateName.Location = new System.Drawing.Point(15, 29);
-            this.lblMainCateName.Name = "lblMainCateName";
-            this.lblMainCateName.Size = new System.Drawing.Size(186, 24);
-            this.lblMainCateName.TabIndex = 0;
-            this.lblMainCateName.Text = "Main Category Name";
+            this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSave.Location = new System.Drawing.Point(200, 293);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(101, 45);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // btnClear
             // 
@@ -166,15 +125,55 @@
             this.btnClear.TabIndex = 5;
             this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // btnSave
+            // lblMainCateName
             // 
-            this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
-            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSave.Location = new System.Drawing.Point(200, 293);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(101, 45);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.lblMainCateName.AutoSize = true;
+            this.lblMainCateName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainCateName.Location = new System.Drawing.Point(15, 29);
+            this.lblMainCateName.Name = "lblMainCateName";
+            this.lblMainCateName.Size = new System.Drawing.Size(186, 24);
+            this.lblMainCateName.TabIndex = 0;
+            this.lblMainCateName.Text = "Main Category Name";
+            // 
+            // lblSubCategoryName
+            // 
+            this.lblSubCategoryName.AutoSize = true;
+            this.lblSubCategoryName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubCategoryName.Location = new System.Drawing.Point(15, 141);
+            this.lblSubCategoryName.Name = "lblSubCategoryName";
+            this.lblSubCategoryName.Size = new System.Drawing.Size(174, 24);
+            this.lblSubCategoryName.TabIndex = 1;
+            this.lblSubCategoryName.Text = "Sub Category Name";
+            // 
+            // txtSubCatName
+            // 
+            this.txtSubCatName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.txtSubCatName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSubCatName.Font = new System.Drawing.Font("Calibri", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubCatName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtSubCatName.Location = new System.Drawing.Point(19, 186);
+            this.txtSubCatName.Multiline = true;
+            this.txtSubCatName.Name = "txtSubCatName";
+            this.txtSubCatName.Size = new System.Drawing.Size(280, 37);
+            this.txtSubCatName.TabIndex = 4;
+            // 
+            // cmbBoxMainCategory
+            // 
+            this.cmbBoxMainCategory.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBoxMainCategory.FormattingEnabled = true;
+            this.cmbBoxMainCategory.Location = new System.Drawing.Point(19, 82);
+            this.cmbBoxMainCategory.Name = "cmbBoxMainCategory";
+            this.cmbBoxMainCategory.Size = new System.Drawing.Size(282, 32);
+            this.cmbBoxMainCategory.TabIndex = 1;
+            this.cmbBoxMainCategory.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMainCategory_SelectedIndexChanged);
+            // 
+            // pnPassword
+            // 
+            this.pnPassword.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pnPassword.Location = new System.Drawing.Point(19, 229);
+            this.pnPassword.Name = "pnPassword";
+            this.pnPassword.Size = new System.Drawing.Size(282, 1);
+            this.pnPassword.TabIndex = 3;
             // 
             // panel2
             // 
@@ -219,7 +218,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label lblMainCateName;
         private System.Windows.Forms.Label lblSubCategoryName;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtSubCatName;
         private System.Windows.Forms.ComboBox cmbBoxMainCategory;
         private System.Windows.Forms.Panel pnPassword;
         private System.Windows.Forms.Panel panel2;
