@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignIn));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblShopName = new System.Windows.Forms.Label();
+            this.PBUserLogin = new System.Windows.Forms.PictureBox();
             this.pnUsername = new System.Windows.Forms.Panel();
             this.pnPassword = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -37,8 +39,6 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.PBUserLogin = new System.Windows.Forms.PictureBox();
-            this.lblShopName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBUserLogin)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(352, 187);
             this.panel1.TabIndex = 0;
+            // 
+            // lblShopName
+            // 
+            this.lblShopName.AutoSize = true;
+            this.lblShopName.BackColor = System.Drawing.Color.Transparent;
+            this.lblShopName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShopName.ForeColor = System.Drawing.Color.White;
+            this.lblShopName.Location = new System.Drawing.Point(138, 38);
+            this.lblShopName.Name = "lblShopName";
+            this.lblShopName.Size = new System.Drawing.Size(74, 29);
+            this.lblShopName.TabIndex = 1;
+            this.lblShopName.Text = "label1";
+            // 
+            // PBUserLogin
+            // 
+            this.PBUserLogin.BackColor = System.Drawing.Color.Transparent;
+            this.PBUserLogin.Image = ((System.Drawing.Image)(resources.GetObject("PBUserLogin.Image")));
+            this.PBUserLogin.Location = new System.Drawing.Point(34, 38);
+            this.PBUserLogin.Name = "PBUserLogin";
+            this.PBUserLogin.Size = new System.Drawing.Size(100, 100);
+            this.PBUserLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PBUserLogin.TabIndex = 0;
+            this.PBUserLogin.TabStop = false;
             // 
             // pnUsername
             // 
@@ -130,35 +153,12 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             // 
-            // PBUserLogin
-            // 
-            this.PBUserLogin.BackColor = System.Drawing.Color.Transparent;
-            this.PBUserLogin.Image = ((System.Drawing.Image)(resources.GetObject("PBUserLogin.Image")));
-            this.PBUserLogin.Location = new System.Drawing.Point(34, 38);
-            this.PBUserLogin.Name = "PBUserLogin";
-            this.PBUserLogin.Size = new System.Drawing.Size(100, 100);
-            this.PBUserLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PBUserLogin.TabIndex = 0;
-            this.PBUserLogin.TabStop = false;
-            // 
-            // lblShopName
-            // 
-            this.lblShopName.AutoSize = true;
-            this.lblShopName.BackColor = System.Drawing.Color.Transparent;
-            this.lblShopName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShopName.ForeColor = System.Drawing.Color.White;
-            this.lblShopName.Location = new System.Drawing.Point(138, 38);
-            this.lblShopName.Name = "lblShopName";
-            this.lblShopName.Size = new System.Drawing.Size(74, 29);
-            this.lblShopName.TabIndex = 1;
-            this.lblShopName.Text = "label1";
-            // 
             // frmSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(354, 466);
+            this.ClientSize = new System.Drawing.Size(351, 466);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
