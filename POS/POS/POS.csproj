@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCustomerRegistering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerRegistering.Designer.cs">
+      <DependentUpon>frmCustomerRegistering.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,13 +64,43 @@
     <Compile Include="frmSignIn.Designer.cs">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSubCategoryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubCategoryAdd.Designer.cs">
+      <DependentUpon>frmSubCategoryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplierRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplierRegister.Designer.cs">
+      <DependentUpon>frmSupplierRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserRegistering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserRegistering.Designer.cs">
+      <DependentUpon>frmUserRegistering.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCustomerRegistering.resx">
+      <DependentUpon>frmCustomerRegistering.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubCategoryAdd.resx">
+      <DependentUpon>frmSubCategoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplierRegister.resx">
+      <DependentUpon>frmSupplierRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserRegistering.resx">
+      <DependentUpon>frmUserRegistering.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
