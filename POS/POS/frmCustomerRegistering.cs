@@ -79,6 +79,7 @@ namespace POS
         public void Clear()
         {
             //// Created By : Kasun
+            ////Created Date:
 
             txtCustFirstName.Text = "";
             txtCustLastName.Text = "";
