@@ -78,6 +78,8 @@ namespace POS
         //common clear function
         public void Clear()
         {
+            //// Created By : Kasun
+
             txtCustFirstName.Text = "";
             txtCustLastName.Text = "";
             txtCustMobileNo.Text = "";
