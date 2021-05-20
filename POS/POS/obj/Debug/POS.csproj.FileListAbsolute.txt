@@ -23,6 +23,27 @@ D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.frmSubCategoryAdd.resources
 D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.frmSupplierRegister.resources
 D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.Properties.Resources.resources
 D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.csproj.GenerateResource.Cache
+<<<<<<< Updated upstream
 D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.exe
 D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.pdb
 D:\Git hub\NewPosSystem\POS\POS\obj\Debug\POS.frmUserRegistering.resources
+=======
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\bin\Debug\POS.exe.config
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\bin\Debug\POS.exe
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\bin\Debug\POS.pdb
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\bin\Debug\BLL.dll
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\bin\Debug\DAL.dll
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\bin\Debug\BLL.pdb
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\bin\Debug\DAL.pdb
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.csprojResolveAssemblyReference.cache
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.frmCustomerRegistering.resources
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.frmLogin.resources
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.frmSignIn.resources
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.frmSubCategoryAdd.resources
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.frmSupplierRegister.resources
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.frmUserRegistering.resources
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.Properties.Resources.resources
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.csproj.GenerateResource.Cache
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.exe
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.pdb
+>>>>>>> Stashed changes

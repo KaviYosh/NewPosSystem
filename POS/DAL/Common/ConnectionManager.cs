@@ -12,7 +12,7 @@ namespace DAL
         public static SqlConnection GetConnection()  
         {
             //con string get app config file or hardcode
-            string connectionString = "";
+            string connectionString = "Data Source=DESKTOP-3NJ7TCU;Initial Catalog=POS;Integrated Security=True";
 
             SqlConnection connection = new SqlConnection(connectionString);
             return connection;
