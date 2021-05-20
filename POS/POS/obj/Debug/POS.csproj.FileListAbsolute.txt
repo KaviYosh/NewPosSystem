@@ -47,3 +47,7 @@ C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.cs
 C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.exe
 C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\POS\obj\Debug\POS.pdb
 >>>>>>> Stashed changes
+D:\Git hub\NewPosSystem\POS\POS\bin\Debug\BLL.dll
+D:\Git hub\NewPosSystem\POS\POS\bin\Debug\DAL.dll
+D:\Git hub\NewPosSystem\POS\POS\bin\Debug\BLL.pdb
+D:\Git hub\NewPosSystem\POS\POS\bin\Debug\DAL.pdb
