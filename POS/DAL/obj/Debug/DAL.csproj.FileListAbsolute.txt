@@ -8,3 +8,10 @@ D:\Git hub\NewPosSystem\POS\DAL\bin\Debug\DAL.pdb
 D:\Git hub\NewPosSystem\POS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\Git hub\NewPosSystem\POS\DAL\obj\Debug\DAL.dll
 D:\Git hub\NewPosSystem\POS\DAL\obj\Debug\DAL.pdb
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\DAL\bin\Debug\DAL.dll
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\DAL\bin\Debug\DAL.pdb
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\DAL\bin\Debug\BLL.dll
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\DAL\bin\Debug\BLL.pdb
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\DAL\obj\Debug\DAL.dll
+C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\DAL\obj\Debug\DAL.pdb
