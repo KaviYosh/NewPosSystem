@@ -74,6 +74,12 @@
             this.lblSupplierTeleNoLand = new System.Windows.Forms.Label();
             this.txtSupplierCompanyName = new System.Windows.Forms.TextBox();
             this.pnPassword = new System.Windows.Forms.Panel();
+            this.SupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupAddressLine1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupAddressLine2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupAddressLine3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TeleNoLand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MobileNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).BeginInit();
             this.panel2.SuspendLayout();
@@ -125,16 +131,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1660, 581);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            
             // 
             // dGVSupplierDetails
             // 
+            this.dGVSupplierDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVSupplierDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVSupplierDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SupName,
+            this.SupAddressLine1,
+            this.SupAddressLine2,
+            this.SupAddressLine3,
+            this.TeleNoLand,
+            this.MobileNo});
             this.dGVSupplierDetails.Location = new System.Drawing.Point(789, 3);
             this.dGVSupplierDetails.Name = "dGVSupplierDetails";
             this.dGVSupplierDetails.RowTemplate.Height = 24;
             this.dGVSupplierDetails.Size = new System.Drawing.Size(859, 558);
             this.dGVSupplierDetails.TabIndex = 25;
+            this.dGVSupplierDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVSupplierDetails_CellContentClick);
             // 
             // panel10
             // 
@@ -160,7 +175,7 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(382, 559);
             this.panel10.TabIndex = 24;
-            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
+            
             // 
             // panel12
             // 
@@ -181,7 +196,7 @@
             this.txtSupplierRemarks.Name = "txtSupplierRemarks";
             this.txtSupplierRemarks.Size = new System.Drawing.Size(335, 106);
             this.txtSupplierRemarks.TabIndex = 12;
-            this.txtSupplierRemarks.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            
             // 
             // lblSupplierRemarks
             // 
@@ -202,6 +217,7 @@
             this.btnClear.Size = new System.Drawing.Size(113, 52);
             this.btnClear.TabIndex = 5;
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -212,6 +228,7 @@
             this.btnSave.Size = new System.Drawing.Size(113, 52);
             this.btnSave.TabIndex = 6;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtSupplierPersonMobileNo
             // 
@@ -224,7 +241,7 @@
             this.txtSupplierPersonMobileNo.Name = "txtSupplierPersonMobileNo";
             this.txtSupplierPersonMobileNo.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierPersonMobileNo.TabIndex = 11;
-            this.txtSupplierPersonMobileNo.TextChanged += new System.EventHandler(this.txtPersonMobileNo_TextChanged);
+            
             // 
             // panel13
             // 
@@ -255,7 +272,7 @@
             this.txtSupplierPersonOfficePhoneNo.Name = "txtSupplierPersonOfficePhoneNo";
             this.txtSupplierPersonOfficePhoneNo.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierPersonOfficePhoneNo.TabIndex = 10;
-            this.txtSupplierPersonOfficePhoneNo.TextChanged += new System.EventHandler(this.txtPersonOfficePhoneNo_TextChanged);
+            
             // 
             // panel14
             // 
@@ -286,7 +303,7 @@
             this.txtSupplierDesignation.Name = "txtSupplierDesignation";
             this.txtSupplierDesignation.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierDesignation.TabIndex = 9;
-            this.txtSupplierDesignation.TextChanged += new System.EventHandler(this.txtDesignation_TextChanged);
+            
             // 
             // panel16
             // 
@@ -327,7 +344,7 @@
             this.txtSupplierContactPersonName.Name = "txtSupplierContactPersonName";
             this.txtSupplierContactPersonName.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierContactPersonName.TabIndex = 8;
-            this.txtSupplierContactPersonName.TextChanged += new System.EventHandler(this.txtContactPersonName_TextChanged);
+            
             // 
             // panel17
             // 
@@ -365,7 +382,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(368, 559);
             this.panel3.TabIndex = 6;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+           
             // 
             // txtSupplierCity
             // 
@@ -378,7 +395,7 @@
             this.txtSupplierCity.Name = "txtSupplierCity";
             this.txtSupplierCity.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierCity.TabIndex = 7;
-            this.txtSupplierCity.TextChanged += new System.EventHandler(this.txtCity_TextChanged);
+            
             // 
             // panel9
             // 
@@ -409,7 +426,7 @@
             this.txtSupplierStreetAddLine2.Name = "txtSupplierStreetAddLine2";
             this.txtSupplierStreetAddLine2.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierStreetAddLine2.TabIndex = 6;
-            this.txtSupplierStreetAddLine2.TextChanged += new System.EventHandler(this.txtStreetAddLine2_TextChanged);
+            
             // 
             // panel8
             // 
@@ -440,7 +457,7 @@
             this.txtSupplierStreetAddress.Name = "txtSupplierStreetAddress";
             this.txtSupplierStreetAddress.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierStreetAddress.TabIndex = 5;
-            this.txtSupplierStreetAddress.TextChanged += new System.EventHandler(this.txtStreetAddress_TextChanged);
+            
             // 
             // panel7
             // 
@@ -459,7 +476,7 @@
             this.lblSupplierStreetAddress.Size = new System.Drawing.Size(132, 24);
             this.lblSupplierStreetAddress.TabIndex = 15;
             this.lblSupplierStreetAddress.Text = "Street Address";
-            this.lblSupplierStreetAddress.Click += new System.EventHandler(this.lblStreetAddress_Click);
+            
             // 
             // txtSupplierFaxNo
             // 
@@ -471,8 +488,7 @@
             this.txtSupplierFaxNo.Multiline = true;
             this.txtSupplierFaxNo.Name = "txtSupplierFaxNo";
             this.txtSupplierFaxNo.Size = new System.Drawing.Size(330, 30);
-            this.txtSupplierFaxNo.TabIndex = 4;
-            this.txtSupplierFaxNo.TextChanged += new System.EventHandler(this.txtFaxNo_TextChanged);
+            this.txtSupplierFaxNo.TabIndex = 4;            
             // 
             // panel6
             // 
@@ -504,7 +520,7 @@
             this.txtSupplierMobileNo.PasswordChar = '*';
             this.txtSupplierMobileNo.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierMobileNo.TabIndex = 3;
-            this.txtSupplierMobileNo.TextChanged += new System.EventHandler(this.txtMobileNo_TextChanged);
+            
             // 
             // panel5
             // 
@@ -535,7 +551,7 @@
             this.txtSupplierTeleLandNo.Name = "txtSupplierTeleLandNo";
             this.txtSupplierTeleLandNo.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierTeleLandNo.TabIndex = 2;
-            this.txtSupplierTeleLandNo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            
             // 
             // panel4
             // 
@@ -576,7 +592,7 @@
             this.txtSupplierCompanyName.Name = "txtSupplierCompanyName";
             this.txtSupplierCompanyName.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierCompanyName.TabIndex = 1;
-            this.txtSupplierCompanyName.TextChanged += new System.EventHandler(this.txtCompanyName_TextChanged);
+            
             // 
             // pnPassword
             // 
@@ -585,6 +601,36 @@
             this.pnPassword.Name = "pnPassword";
             this.pnPassword.Size = new System.Drawing.Size(330, 1);
             this.pnPassword.TabIndex = 3;
+            // 
+            // SupName
+            // 
+            this.SupName.HeaderText = "Supplier Name";
+            this.SupName.Name = "SupName";
+            // 
+            // SupAddressLine1
+            // 
+            this.SupAddressLine1.HeaderText = "Address Line";
+            this.SupAddressLine1.Name = "SupAddressLine1";
+            // 
+            // SupAddressLine2
+            // 
+            this.SupAddressLine2.HeaderText = "Address line 2";
+            this.SupAddressLine2.Name = "SupAddressLine2";
+            // 
+            // SupAddressLine3
+            // 
+            this.SupAddressLine3.HeaderText = "City";
+            this.SupAddressLine3.Name = "SupAddressLine3";
+            // 
+            // TeleNoLand
+            // 
+            this.TeleNoLand.HeaderText = "Telephone Number";
+            this.TeleNoLand.Name = "TeleNoLand";
+            // 
+            // MobileNo
+            // 
+            this.MobileNo.HeaderText = "Mobile Number";
+            this.MobileNo.Name = "MobileNo";
             // 
             // frmSupplierRegister
             // 
@@ -656,5 +702,11 @@
         private System.Windows.Forms.Label lblSupplierRemarks;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.DataGridView dGVSupplierDetails;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupAddressLine1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupAddressLine2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupAddressLine3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TeleNoLand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MobileNo;
     }
 }
