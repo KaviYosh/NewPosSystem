@@ -81,12 +81,12 @@ namespace POS
             //// Created By : Kasun
             ////Created Date:
 
-            txtCustFirstName.Text = "";
-            txtCustLastName.Text = "";
-            txtCustMobileNo.Text = "";
-            txtCustStreetAddLine2.Text = "";
-            txtCustStreetAddress.Text = "";
-            txtCustUserNICNo.Text = "";
+                txtCustFirstName.Text = "";
+                txtCustLastName.Text = "";
+                txtCustMobileNo.Text = "";
+                txtCustStreetAddLine2.Text = "";
+                txtCustStreetAddress.Text = "";
+                txtCustUserNICNo.Text = "";
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -100,12 +100,12 @@ namespace POS
                 SqlTransaction trans = con.BeginTransaction();
 
                 //get Form  details for insert
-                Customer.FristName = txtCustFirstName.Text;
-                Customer.LastName = txtCustLastName.Text;
-                Customer.MobileNo = txtCustMobileNo.Text;
-                Customer.AddLine1 = txtCustStreetAddress.Text;
-                Customer.AddLine2 = txtCustStreetAddLine2.Text;
-                Customer.NIC = txtCustUserNICNo.Text;
+                Customer.FristName = txtCustFirstName.Text.Trim();
+                Customer.LastName = txtCustLastName.Text.Trim();
+                Customer.MobileNo = txtCustMobileNo.Text.Trim();
+                Customer.AddLine1 = txtCustStreetAddress.Text.Trim();
+                Customer.AddLine2 = txtCustStreetAddLine2.Text.Trim();
+                Customer.NIC = txtCustUserNICNo.Text.Trim();
                 Customer.Active = 1;
                 Customer.CreatedOn = DateTime.Now;
                 Customer.CreatedBy = 1;

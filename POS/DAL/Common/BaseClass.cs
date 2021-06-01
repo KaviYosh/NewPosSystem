@@ -165,6 +165,24 @@ namespace DAL.Common
             return exsits;
         }
 
+        public int InsertAndGetId(string sql, SqlConnection connection, SqlTransaction transaction)
+        {
+            int id = 0;
+            try
+            {
+                SqlCommand command = new SqlCommand(sql, connection, transaction);
+                command.CommandText = sql;
+                command.Connection = connection;
+                command.Transaction = transaction;
+                id = Convert.ToInt16(command.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return id;
+        }
+
         #endregion
     }
 }

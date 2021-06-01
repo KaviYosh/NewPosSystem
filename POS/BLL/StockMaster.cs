@@ -8,5 +8,6 @@ namespace BLL.API
 {
     public class StockMaster
     {
+        
     }
 }

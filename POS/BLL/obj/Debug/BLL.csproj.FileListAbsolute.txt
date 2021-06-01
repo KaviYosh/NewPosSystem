@@ -10,6 +10,6 @@ C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\BLL\obj\Debug\BLL.dl
 C:\Users\Kasun Nayanajith\Documents\GitHub\NewPosSystem\POS\BLL\obj\Debug\BLL.pdb
 D:\Git hub\NewPosSystem\POS\BLL\bin\Debug\BLL.dll
 D:\Git hub\NewPosSystem\POS\BLL\bin\Debug\BLL.pdb
-D:\Git hub\NewPosSystem\POS\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\Git hub\NewPosSystem\POS\BLL\obj\Debug\BLL.dll
 D:\Git hub\NewPosSystem\POS\BLL\obj\Debug\BLL.pdb
+D:\Git hub\NewPosSystem\POS\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache

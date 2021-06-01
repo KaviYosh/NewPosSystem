@@ -40,7 +40,7 @@ namespace DAL
                 dt = Select(sql);
                 return dt;
             }
-            catch(Exception ex)
+            catch(Exception )
             {
                 throw;
             }
