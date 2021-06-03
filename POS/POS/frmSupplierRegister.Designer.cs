@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSupplierRegister));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbTitle = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -80,6 +87,7 @@
             this.SupAddressLine3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TeleNoLand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MobileNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FaxNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).BeginInit();
             this.panel2.SuspendLayout();
@@ -131,11 +139,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1660, 581);
             this.panel2.TabIndex = 2;
-            
             // 
             // dGVSupplierDetails
             // 
             this.dGVSupplierDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVSupplierDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dGVSupplierDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVSupplierDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SupName,
@@ -143,7 +158,8 @@
             this.SupAddressLine2,
             this.SupAddressLine3,
             this.TeleNoLand,
-            this.MobileNo});
+            this.MobileNo,
+            this.FaxNo});
             this.dGVSupplierDetails.Location = new System.Drawing.Point(789, 3);
             this.dGVSupplierDetails.Name = "dGVSupplierDetails";
             this.dGVSupplierDetails.RowTemplate.Height = 24;
@@ -175,7 +191,6 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(382, 559);
             this.panel10.TabIndex = 24;
-            
             // 
             // panel12
             // 
@@ -196,7 +211,6 @@
             this.txtSupplierRemarks.Name = "txtSupplierRemarks";
             this.txtSupplierRemarks.Size = new System.Drawing.Size(335, 106);
             this.txtSupplierRemarks.TabIndex = 12;
-            
             // 
             // lblSupplierRemarks
             // 
@@ -215,7 +229,7 @@
             this.btnClear.Location = new System.Drawing.Point(128, 488);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(113, 52);
-            this.btnClear.TabIndex = 5;
+            this.btnClear.TabIndex = 15;
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -226,7 +240,7 @@
             this.btnSave.Location = new System.Drawing.Point(259, 488);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(113, 52);
-            this.btnSave.TabIndex = 6;
+            this.btnSave.TabIndex = 14;
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -241,7 +255,6 @@
             this.txtSupplierPersonMobileNo.Name = "txtSupplierPersonMobileNo";
             this.txtSupplierPersonMobileNo.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierPersonMobileNo.TabIndex = 11;
-            
             // 
             // panel13
             // 
@@ -272,7 +285,6 @@
             this.txtSupplierPersonOfficePhoneNo.Name = "txtSupplierPersonOfficePhoneNo";
             this.txtSupplierPersonOfficePhoneNo.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierPersonOfficePhoneNo.TabIndex = 10;
-            
             // 
             // panel14
             // 
@@ -303,7 +315,6 @@
             this.txtSupplierDesignation.Name = "txtSupplierDesignation";
             this.txtSupplierDesignation.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierDesignation.TabIndex = 9;
-            
             // 
             // panel16
             // 
@@ -344,7 +355,6 @@
             this.txtSupplierContactPersonName.Name = "txtSupplierContactPersonName";
             this.txtSupplierContactPersonName.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierContactPersonName.TabIndex = 8;
-            
             // 
             // panel17
             // 
@@ -382,7 +392,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(368, 559);
             this.panel3.TabIndex = 6;
-           
             // 
             // txtSupplierCity
             // 
@@ -395,7 +404,6 @@
             this.txtSupplierCity.Name = "txtSupplierCity";
             this.txtSupplierCity.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierCity.TabIndex = 7;
-            
             // 
             // panel9
             // 
@@ -426,7 +434,6 @@
             this.txtSupplierStreetAddLine2.Name = "txtSupplierStreetAddLine2";
             this.txtSupplierStreetAddLine2.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierStreetAddLine2.TabIndex = 6;
-            
             // 
             // panel8
             // 
@@ -457,7 +464,6 @@
             this.txtSupplierStreetAddress.Name = "txtSupplierStreetAddress";
             this.txtSupplierStreetAddress.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierStreetAddress.TabIndex = 5;
-            
             // 
             // panel7
             // 
@@ -476,7 +482,6 @@
             this.lblSupplierStreetAddress.Size = new System.Drawing.Size(132, 24);
             this.lblSupplierStreetAddress.TabIndex = 15;
             this.lblSupplierStreetAddress.Text = "Street Address";
-            
             // 
             // txtSupplierFaxNo
             // 
@@ -488,7 +493,7 @@
             this.txtSupplierFaxNo.Multiline = true;
             this.txtSupplierFaxNo.Name = "txtSupplierFaxNo";
             this.txtSupplierFaxNo.Size = new System.Drawing.Size(330, 30);
-            this.txtSupplierFaxNo.TabIndex = 4;            
+            this.txtSupplierFaxNo.TabIndex = 4;
             // 
             // panel6
             // 
@@ -517,10 +522,8 @@
             this.txtSupplierMobileNo.Location = new System.Drawing.Point(19, 187);
             this.txtSupplierMobileNo.Multiline = true;
             this.txtSupplierMobileNo.Name = "txtSupplierMobileNo";
-            this.txtSupplierMobileNo.PasswordChar = '*';
             this.txtSupplierMobileNo.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierMobileNo.TabIndex = 3;
-            
             // 
             // panel5
             // 
@@ -551,7 +554,6 @@
             this.txtSupplierTeleLandNo.Name = "txtSupplierTeleLandNo";
             this.txtSupplierTeleLandNo.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierTeleLandNo.TabIndex = 2;
-            
             // 
             // panel4
             // 
@@ -592,7 +594,6 @@
             this.txtSupplierCompanyName.Name = "txtSupplierCompanyName";
             this.txtSupplierCompanyName.Size = new System.Drawing.Size(330, 30);
             this.txtSupplierCompanyName.TabIndex = 1;
-            
             // 
             // pnPassword
             // 
@@ -604,6 +605,8 @@
             // 
             // SupName
             // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SupName.DefaultCellStyle = dataGridViewCellStyle2;
             this.SupName.HeaderText = "Supplier Name";
             this.SupName.Name = "SupName";
             // 
@@ -614,23 +617,38 @@
             // 
             // SupAddressLine2
             // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SupAddressLine2.DefaultCellStyle = dataGridViewCellStyle3;
             this.SupAddressLine2.HeaderText = "Address line 2";
             this.SupAddressLine2.Name = "SupAddressLine2";
             // 
             // SupAddressLine3
             // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SupAddressLine3.DefaultCellStyle = dataGridViewCellStyle4;
             this.SupAddressLine3.HeaderText = "City";
             this.SupAddressLine3.Name = "SupAddressLine3";
             // 
             // TeleNoLand
             // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeleNoLand.DefaultCellStyle = dataGridViewCellStyle5;
             this.TeleNoLand.HeaderText = "Telephone Number";
             this.TeleNoLand.Name = "TeleNoLand";
             // 
             // MobileNo
             // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MobileNo.DefaultCellStyle = dataGridViewCellStyle6;
             this.MobileNo.HeaderText = "Mobile Number";
             this.MobileNo.Name = "MobileNo";
+            // 
+            // FaxNo
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FaxNo.DefaultCellStyle = dataGridViewCellStyle7;
+            this.FaxNo.HeaderText = "Fax No";
+            this.FaxNo.Name = "FaxNo";
             // 
             // frmSupplierRegister
             // 
@@ -708,5 +726,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SupAddressLine3;
         private System.Windows.Forms.DataGridViewTextBoxColumn TeleNoLand;
         private System.Windows.Forms.DataGridViewTextBoxColumn MobileNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FaxNo;
     }
 }

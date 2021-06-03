@@ -46,6 +46,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesMaster.cs" />
     <Compile Include="StockMaster.cs" />
+    <Compile Include="SupplierContactPersonMaster.cs" />
     <Compile Include="SupplierMaster.cs" />
     <Compile Include="UserMaster.cs" />
   </ItemGroup>

@@ -99,40 +99,48 @@ namespace POS
                 //Start Sql Transaction Block
                 SqlTransaction trans = con.BeginTransaction();
 
-                //get Form  details for insert
-                Customer.FristName = txtCustFirstName.Text.Trim();
-                Customer.LastName = txtCustLastName.Text.Trim();
-                Customer.MobileNo = txtCustMobileNo.Text.Trim();
-                Customer.AddLine1 = txtCustStreetAddress.Text.Trim();
-                Customer.AddLine2 = txtCustStreetAddLine2.Text.Trim();
-                Customer.NIC = txtCustUserNICNo.Text.Trim();
-                Customer.Active = 1;
-                Customer.CreatedOn = DateTime.Now;
-                Customer.CreatedBy = 1;
-
-                //call insert function
-                bool status = CustomerDAL.InsertCustomerDetails(Customer, con, trans);
-                if (status == true)
+                if (txtCustFirstName.Text != "" && txtCustLastName.Text != "" && txtCustMobileNo.Text != "" && txtCustUserNICNo.Text != "")
                 {
-                    //commit sql transaction
-                    trans.Commit();
-                    MessageBox.Show("Customer Details Saved Successfully ", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //get Form  details for insert
+                    Customer.FristName = txtCustFirstName.Text.Trim();
+                    Customer.LastName = txtCustLastName.Text.Trim();
+                    Customer.MobileNo = txtCustMobileNo.Text.Trim();
+                    Customer.AddLine1 = txtCustStreetAddress.Text.Trim();
+                    Customer.AddLine2 = txtCustStreetAddLine2.Text.Trim();
+                    Customer.NIC = txtCustUserNICNo.Text.Trim();
+                    Customer.Active = 1;
+                    Customer.CreatedOn = DateTime.Now;
+                    Customer.CreatedBy = 1;
+
+                    //call insert function
+                    bool status = CustomerDAL.InsertCustomerDetails(Customer, con, trans);
+                    if (status == true)
+                    {
+                        //commit sql transaction
+                        trans.Commit();
+                        MessageBox.Show("Customer Details Saved Successfully ", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        //rallback sql transaction
+                        trans.Rollback();
+                        MessageBox.Show("Saved Failed. Retry again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    //clear already filled data
+                    Clear();
+
+                    //load data to a grid view user can confirm his data insert or no
+                    loadAllMainCategoryDetails(null);
+
+                    //close connection
+                    con.Close();
                 }
                 else
                 {
-                    //rallback sql transaction
-                    trans.Rollback();
-                    MessageBox.Show("Saved Failed. Retry again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please fill all the fields.", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-                //clear already filled data
-                Clear();
-
-                //load data to a grid view user can confirm his data insert or no
-                loadAllMainCategoryDetails(null);
-
-                //close connection
-                con.Close();
+                
             }
             catch (Exception ex)
             {

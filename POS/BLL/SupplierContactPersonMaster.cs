@@ -18,7 +18,7 @@ namespace BLL.API
         string _personOfficeNumber;
         string _personMobileNo;
         string _remarks;
-        int _supID
+        int _supID;
         int _active;
         int _createdBy;
         DateTime _createdOn;

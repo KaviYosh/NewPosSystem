@@ -18,6 +18,7 @@ namespace POS
         //create object into class
         SupplierDAL SupplierDAL = new SupplierDAL();
         SupplierMaster Supplier = new SupplierMaster();
+        SupplierContactPersonMaster SupConPersonmaster = new SupplierContactPersonMaster();
         SqlConnection con = ConnectionsManager.GetConnection();
             
         public frmSupplierRegister()
@@ -33,6 +34,7 @@ namespace POS
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            int id = 0;
             try
             {
                 //Open Connection
@@ -41,40 +43,63 @@ namespace POS
                 //Start Sql Transaction Block
                 SqlTransaction trans = con.BeginTransaction();
 
-                Supplier.SupName = txtSupplierCompanyName.Text.Trim();
-                Supplier.TeleNoLand = txtSupplierTeleLandNo.Text.Trim();
-                Supplier.MobileNo = txtSupplierMobileNo.Text.Trim();
-                Supplier.FaxNo = txtSupplierFaxNo.Text.Trim();
-                Supplier.SupAddressLine1 = txtSupplierStreetAddress.Text.Trim();
-                Supplier.SupAddressLine2 = txtSupplierStreetAddLine2.Text.Trim();
-                Supplier.SupAddressLine3 = txtSupplierCity.Text.Trim();
-                Supplier.SupAddressLine1 = txtSupplierStreetAddress.Text.Trim();
-                Supplier.SupAddressLine1 = txtSupplierStreetAddress.Text.Trim();
-
-                //call insert function
-                int id = SupplierDAL.InsertSupplierDetails(Supplier, con, trans);
-                if (id != 0)
+                if (txtSupplierCompanyName.Text != "" && txtSupplierTeleLandNo.Text != ""  && txtSupplierMobileNo.Text != "" && txtSupplierStreetAddress.Text != "" )
                 {
-                    //commit sql transaction
-                    trans.Commit();
-                    MessageBox.Show("Customer Details Saved Successfully ", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Supplier.SupName = txtSupplierCompanyName.Text.Trim();
+                    Supplier.TeleNoLand = txtSupplierTeleLandNo.Text.Trim();
+                    Supplier.MobileNo = txtSupplierMobileNo.Text.Trim();
+                    Supplier.FaxNo = txtSupplierFaxNo.Text.Trim();
+                    Supplier.SupAddressLine1 = txtSupplierStreetAddress.Text.Trim();
+                    Supplier.SupAddressLine2 = txtSupplierStreetAddLine2.Text.Trim();
+                    Supplier.SupAddressLine3 = txtSupplierCity.Text.Trim();                    
+                    Supplier.CreatedBy = 1;
+                    Supplier.CreatedOn = DateTime.Now;
+                    Supplier.Active = 1;
+
+
+                    //call insert function
+                    id = SupplierDAL.InsertSupplierDetails(Supplier, con, trans);
+
+
+                    SupConPersonmaster.SupID = id;
+                    SupConPersonmaster.PersonName = txtSupplierContactPersonName.Text.Trim();
+                    SupConPersonmaster.Designation = txtSupplierDesignation.Text.Trim();
+                    SupConPersonmaster.PersonOfficeNumber = txtSupplierPersonOfficePhoneNo.Text.Trim();
+                    SupConPersonmaster.PersonMobileNo = txtSupplierPersonMobileNo.Text.Trim();
+                    SupConPersonmaster.Remarks = txtSupplierRemarks.Text.Trim();
+                    SupConPersonmaster.CreatedBy = 1;
+                    SupConPersonmaster.CreatedOn = DateTime.Now;
+                    SupConPersonmaster.Active = 1;
+
+                    id = SupplierDAL.InsertSupplierContactPersonInfo(SupConPersonmaster, con, trans);
+
+                    if (id != 0)
+                    {
+                        //commit sql transaction
+                        trans.Commit();
+                        MessageBox.Show("Supplier Details Saved Successfully ", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        //rallback sql transaction
+                        trans.Rollback();
+                        MessageBox.Show("Saved Failed. Retry again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    //clear already filled data
+                    Clear();
+
+                    //load data to a grid view user can confirm his data insert or no
+                    loadAllSupplierDetails(null);
+
+                    //close connection
+                    con.Close();
+
                 }
                 else
                 {
-                    //rallback sql transaction
-                    trans.Rollback();
-                    MessageBox.Show("Saved Failed. Retry again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please fill all the fields.", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-                //clear already filled data
-                Clear();
-
-                //load data to a grid view user can confirm his data insert or no
-                loadAllSupplierDetails(null);
-
-                //close connection
-                con.Close();
-
 
             }
             catch (Exception ex)
@@ -102,9 +127,10 @@ namespace POS
                         dGVSupplierDetails.Rows[count].Cells["SupName"].Value = dtCustomer.Rows[count]["SupName"].ToString();
                         dGVSupplierDetails.Rows[count].Cells["SupAddressLine1"].Value = dtCustomer.Rows[count]["SupAddressLine1"].ToString();
                         dGVSupplierDetails.Rows[count].Cells["SupAddressLine2"].Value = dtCustomer.Rows[count]["SupAddressLine2"].ToString();
-                        dGVSupplierDetails.Rows[count].Cells["SupAddressLine3"].Value = dtCustomer.Rows[count]["SupAddressLine3 "].ToString();
+                        dGVSupplierDetails.Rows[count].Cells["SupAddressLine3"].Value = dtCustomer.Rows[count]["SupAddressLine3"].ToString();
                         dGVSupplierDetails.Rows[count].Cells["TeleNoLand"].Value = dtCustomer.Rows[count]["TeleNoLand"].ToString();
                         dGVSupplierDetails.Rows[count].Cells["MobileNo"].Value = dtCustomer.Rows[count]["MobileNo"].ToString();
+                        dGVSupplierDetails.Rows[count].Cells["FaxNo"].Value = dtCustomer.Rows[count]["FaxNo"].ToString();
                     }
                 }
             }
