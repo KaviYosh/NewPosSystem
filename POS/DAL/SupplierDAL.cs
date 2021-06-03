@@ -36,9 +36,26 @@ namespace DAL
             int id = 0;
             try
             {
-                string sqlQuery = "INSERT INTO Supplier(SupName,SupAddressLine1,SupAddressLine2,SupAddressLine3,TeleNoLand,MobileNo,FaxNo,CreatedBy,CreatedDate,CreateMachine,Active) " +
+                string sqlQuery = "INSERT INTO Supplier(SupName,SupAddressLine1,SupAddressLine2,SupAddressLine3,TeleNoLand,MobileNo,FaxNo,CreatedBy,CreatedDate,Active) " +
                                   "VALUES('" + supplier.SupName + "','" + supplier.SupAddressLine1 + "','" + supplier.SupAddressLine2 + "','" + supplier.SupAddressLine3 + "', " +
-                                  "'" + supplier.TeleNoLand + "','" + supplier.MobileNo + "','" + supplier.FaxNo         + "','" + supplier.CreatedBy + "','" + supplier.CreatedOn + "','" + supplier.Active + "') SELECT SCOPE_IDENTITY() AS [SCOPE_IDENTITY] ";
+                                  "'" + supplier.TeleNoLand + "','" + supplier.MobileNo + "','" + supplier.FaxNo + "','" + supplier.CreatedBy + "','" + supplier.CreatedOn + "','" + supplier.Active + "') SELECT SCOPE_IDENTITY() AS [SCOPE_IDENTITY] ";
+                id = InsertAndGetId(sqlQuery, connect, transac);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return id;
+        }
+
+        public int InsertSupplierContactPersonInfo(SupplierContactPersonMaster supplierConpersonMaster, SqlConnection connect, SqlTransaction transac)
+        {
+            int id = 0;
+            try
+            {
+                string sqlQuery = "INSERT INTO SupplierContactPersonInfo(SupID,PersonName,Designation,PersonOfficeNumber,PersonMobileNo,Remarks,CreatedDate,CreatedBy,Active) " +
+                                  "VALUES('" + supplierConpersonMaster.SupID + "','" + supplierConpersonMaster.PersonName + "','" + supplierConpersonMaster.Designation + "','" + supplierConpersonMaster.PersonOfficeNumber + "', " +
+                                  "'" + supplierConpersonMaster.PersonMobileNo + "','" + supplierConpersonMaster.Remarks + "','" + supplierConpersonMaster.CreatedOn + "','" + supplierConpersonMaster.CreatedBy + "','" + supplierConpersonMaster.Active + "') SELECT SCOPE_IDENTITY() AS [SCOPE_IDENTITY]";
                 id = InsertAndGetId(sqlQuery, connect, transac);
             }
             catch (Exception ex)
