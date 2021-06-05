@@ -17,11 +17,14 @@ namespace DAL
             try
             {
                 DataTable dt = new DataTable();
-                string sql = "SELECT SupName,SupAddressLine1,SupAddressLine2,SupAddressLine3,TeleNoLand,MobileNo,FaxNo " +
-                             "FROM Supplier " +
-                             "WHERE Active = 1 " +
-                             "AND SupName LIKE ('%" + supplierName + "%') " +
-                             "ORDER BY SupID DESC ";//last records show top
+                string sql = "SELECT SUP.SupName,SUP.SupAddressLine1,SUP.SupAddressLine2,SUP.SupAddressLine3,SUP.TeleNoLand,SUP.MobileNo,SUP.FaxNo,SCPI.PersonName,SCPI.PersonMobileNo " +
+                             "FROM Supplier SUP " +
+                             "INNER JOIN SupplierContactPersonInfo SCPI " +
+                             "ON SUP.SupID = SCPI.SupID " +
+                             "WHERE SUP.Active = 1 " +
+                             "AND SUP.SupName LIKE ('%" + supplierName + "%') " +
+                             "ORDER BY SUP.SupID DESC ";//last records show top
+                
                 dt = Select(sql);
                 return dt;
             }

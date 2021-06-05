@@ -34,6 +34,10 @@ namespace POS
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            /// Create By: Kavinda Yoshana
+            /// Create Date : 2021/05/20
+            /// Des : supplier detals insert to data base
+
             int id = 0;
             try
             {
@@ -111,6 +115,10 @@ namespace POS
 
         public void loadAllSupplierDetails(string supplierName)
         {
+            /// Create By: Kavinda Yoshana
+            /// Create Date : 2021/05/20
+            /// Des : load supplier details to grid view
+
             try
             {
                 DataTable dtCustomer = SupplierDAL.getSupplierDetails(supplierName);
@@ -131,6 +139,8 @@ namespace POS
                         dGVSupplierDetails.Rows[count].Cells["TeleNoLand"].Value = dtCustomer.Rows[count]["TeleNoLand"].ToString();
                         dGVSupplierDetails.Rows[count].Cells["MobileNo"].Value = dtCustomer.Rows[count]["MobileNo"].ToString();
                         dGVSupplierDetails.Rows[count].Cells["FaxNo"].Value = dtCustomer.Rows[count]["FaxNo"].ToString();
+                        dGVSupplierDetails.Rows[count].Cells["PersonName"].Value = dtCustomer.Rows[count]["PersonName"].ToString();
+                        dGVSupplierDetails.Rows[count].Cells["PersonMobileNo"].Value = dtCustomer.Rows[count]["PersonMobileNo"].ToString();
                     }
                 }
             }
@@ -147,6 +157,10 @@ namespace POS
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            /// Create By: Kavinda Yoshana
+            /// Create Date : 2021/05/20
+            /// Des : call clear function
+            
             try
             {
                 //call clear function
@@ -161,8 +175,9 @@ namespace POS
 
         public void Clear()
         {
-            //// Created By : Kasun
-            ////Created Date:
+            /// Create By: Kavinda Yoshana
+            /// Create Date : 2021/05/20
+            /// Des : clear all textbox in form
 
             txtSupplierCompanyName.Text = "";
             txtSupplierTeleLandNo.Text = "";

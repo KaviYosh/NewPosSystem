@@ -114,6 +114,7 @@
             this.btnSave.Size = new System.Drawing.Size(101, 45);
             this.btnSave.TabIndex = 6;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
@@ -159,7 +160,7 @@
             // 
             // cmbBoxMainCategory
             // 
-            this.cmbBoxMainCategory.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBoxMainCategory.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBoxMainCategory.FormattingEnabled = true;
             this.cmbBoxMainCategory.Location = new System.Drawing.Point(19, 82);
             this.cmbBoxMainCategory.Name = "cmbBoxMainCategory";

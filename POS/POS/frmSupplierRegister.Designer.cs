@@ -88,6 +88,8 @@
             this.TeleNoLand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MobileNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FaxNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonMobileNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).BeginInit();
             this.panel2.SuspendLayout();
@@ -103,7 +105,7 @@
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1672, 94);
+            this.panel1.Size = new System.Drawing.Size(1866, 94);
             this.panel1.TabIndex = 1;
             // 
             // pbTitle
@@ -137,7 +139,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(12, 101);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1660, 581);
+            this.panel2.Size = new System.Drawing.Size(1838, 581);
             this.panel2.TabIndex = 2;
             // 
             // dGVSupplierDetails
@@ -159,11 +161,13 @@
             this.SupAddressLine3,
             this.TeleNoLand,
             this.MobileNo,
-            this.FaxNo});
+            this.FaxNo,
+            this.PersonName,
+            this.PersonMobileNo});
             this.dGVSupplierDetails.Location = new System.Drawing.Point(789, 3);
             this.dGVSupplierDetails.Name = "dGVSupplierDetails";
             this.dGVSupplierDetails.RowTemplate.Height = 24;
-            this.dGVSupplierDetails.Size = new System.Drawing.Size(859, 558);
+            this.dGVSupplierDetails.Size = new System.Drawing.Size(1044, 558);
             this.dGVSupplierDetails.TabIndex = 25;
             this.dGVSupplierDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVSupplierDetails_CellContentClick);
             // 
@@ -650,12 +654,22 @@
             this.FaxNo.HeaderText = "Fax No";
             this.FaxNo.Name = "FaxNo";
             // 
+            // PersonName
+            // 
+            this.PersonName.HeaderText = "Contact Person Name";
+            this.PersonName.Name = "PersonName";
+            // 
+            // PersonMobileNo
+            // 
+            this.PersonMobileNo.HeaderText = "Personal Mobile No";
+            this.PersonMobileNo.Name = "PersonMobileNo";
+            // 
             // frmSupplierRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1673, 688);
+            this.ClientSize = new System.Drawing.Size(1862, 688);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmSupplierRegister";
@@ -727,5 +741,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TeleNoLand;
         private System.Windows.Forms.DataGridViewTextBoxColumn MobileNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn FaxNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonMobileNo;
     }
 }

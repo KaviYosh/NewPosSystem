@@ -45,7 +45,9 @@
     <Compile Include="ItemMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesMaster.cs" />
+    <Compile Include="ShopNamemaster.cs" />
     <Compile Include="StockMaster.cs" />
+    <Compile Include="SubCategoryMaster.cs" />
     <Compile Include="SupplierContactPersonMaster.cs" />
     <Compile Include="SupplierMaster.cs" />
     <Compile Include="UserMaster.cs" />
