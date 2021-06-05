@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignIn));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblshopSecondName = new System.Windows.Forms.Label();
             this.lblShopName = new System.Windows.Forms.Label();
             this.PBUserLogin = new System.Windows.Forms.PictureBox();
             this.pnUsername = new System.Windows.Forms.Panel();
@@ -46,30 +47,41 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.lblshopSecondName);
             this.panel1.Controls.Add(this.lblShopName);
             this.panel1.Controls.Add(this.PBUserLogin);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 187);
+            this.panel1.Size = new System.Drawing.Size(422, 187);
             this.panel1.TabIndex = 0;
+            // 
+            // lblshopSecondName
+            // 
+            this.lblshopSecondName.AutoSize = true;
+            this.lblshopSecondName.BackColor = System.Drawing.Color.Transparent;
+            this.lblshopSecondName.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblshopSecondName.ForeColor = System.Drawing.Color.White;
+            this.lblshopSecondName.Location = new System.Drawing.Point(251, 45);
+            this.lblshopSecondName.Name = "lblshopSecondName";
+            this.lblshopSecondName.Size = new System.Drawing.Size(0, 41);
+            this.lblshopSecondName.TabIndex = 2;
             // 
             // lblShopName
             // 
             this.lblShopName.AutoSize = true;
             this.lblShopName.BackColor = System.Drawing.Color.Transparent;
-            this.lblShopName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShopName.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShopName.ForeColor = System.Drawing.Color.White;
-            this.lblShopName.Location = new System.Drawing.Point(140, 38);
+            this.lblShopName.Location = new System.Drawing.Point(68, 11);
             this.lblShopName.Name = "lblShopName";
-            this.lblShopName.Size = new System.Drawing.Size(74, 29);
+            this.lblShopName.Size = new System.Drawing.Size(0, 46);
             this.lblShopName.TabIndex = 1;
-            this.lblShopName.Text = "label1";
             // 
             // PBUserLogin
             // 
             this.PBUserLogin.BackColor = System.Drawing.Color.Transparent;
             this.PBUserLogin.Image = ((System.Drawing.Image)(resources.GetObject("PBUserLogin.Image")));
-            this.PBUserLogin.Location = new System.Drawing.Point(34, 38);
+            this.PBUserLogin.Location = new System.Drawing.Point(26, 69);
             this.PBUserLogin.Name = "PBUserLogin";
             this.PBUserLogin.Size = new System.Drawing.Size(100, 100);
             this.PBUserLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(351, 466);
+            this.ClientSize = new System.Drawing.Size(403, 466);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
@@ -192,5 +204,6 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label lblshopSecondName;
     }
 }

@@ -29,10 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomerRegistering));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbTitle = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dGVCustomerDetails = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtCustStreetAddLine2 = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -54,18 +62,17 @@
             this.lblCustLastName = new System.Windows.Forms.Label();
             this.txtCustFirstName = new System.Windows.Forms.TextBox();
             this.pnPassword = new System.Windows.Forms.Panel();
-            this.TeleNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AddressLine_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AddressLine_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NIC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dGVCustomerDetails = new System.Windows.Forms.DataGridView();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NIC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AddressLine_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AddressLine_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TeleNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVCustomerDetails)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -113,6 +120,32 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1226, 617);
             this.panel2.TabIndex = 3;
+            // 
+            // dGVCustomerDetails
+            // 
+            this.dGVCustomerDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVCustomerDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGVCustomerDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVCustomerDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FirstName,
+            this.LastName,
+            this.NIC,
+            this.AddressLine_1,
+            this.AddressLine_2,
+            this.TeleNo});
+            this.dGVCustomerDetails.Location = new System.Drawing.Point(395, 2);
+            this.dGVCustomerDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dGVCustomerDetails.Name = "dGVCustomerDetails";
+            this.dGVCustomerDetails.RowTemplate.Height = 24;
+            this.dGVCustomerDetails.Size = new System.Drawing.Size(827, 596);
+            this.dGVCustomerDetails.TabIndex = 7;
             // 
             // panel3
             // 
@@ -361,53 +394,47 @@
             this.pnPassword.Size = new System.Drawing.Size(331, 1);
             this.pnPassword.TabIndex = 3;
             // 
-            // TeleNo
-            // 
-            this.TeleNo.HeaderText = "Tele No";
-            this.TeleNo.Name = "TeleNo";
-            // 
-            // AddressLine_2
-            // 
-            this.AddressLine_2.HeaderText = "Add Line 2";
-            this.AddressLine_2.Name = "AddressLine_2";
-            // 
-            // AddressLine_1
-            // 
-            this.AddressLine_1.HeaderText = "Add Line 1";
-            this.AddressLine_1.Name = "AddressLine_1";
-            // 
-            // NIC
-            // 
-            this.NIC.HeaderText = "NIC";
-            this.NIC.Name = "NIC";
-            // 
-            // LastName
-            // 
-            this.LastName.HeaderText = "Last Name";
-            this.LastName.Name = "LastName";
-            // 
             // FirstName
             // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstName.DefaultCellStyle = dataGridViewCellStyle2;
             this.FirstName.HeaderText = "First Name";
             this.FirstName.Name = "FirstName";
             // 
-            // dGVCustomerDetails
+            // LastName
             // 
-            this.dGVCustomerDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dGVCustomerDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVCustomerDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FirstName,
-            this.LastName,
-            this.NIC,
-            this.AddressLine_1,
-            this.AddressLine_2,
-            this.TeleNo});
-            this.dGVCustomerDetails.Location = new System.Drawing.Point(395, 2);
-            this.dGVCustomerDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dGVCustomerDetails.Name = "dGVCustomerDetails";
-            this.dGVCustomerDetails.RowTemplate.Height = 24;
-            this.dGVCustomerDetails.Size = new System.Drawing.Size(827, 596);
-            this.dGVCustomerDetails.TabIndex = 7;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.LastName.HeaderText = "Last Name";
+            this.LastName.Name = "LastName";
+            // 
+            // NIC
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NIC.DefaultCellStyle = dataGridViewCellStyle4;
+            this.NIC.HeaderText = "NIC";
+            this.NIC.Name = "NIC";
+            // 
+            // AddressLine_1
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddressLine_1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.AddressLine_1.HeaderText = "Address Line 1";
+            this.AddressLine_1.Name = "AddressLine_1";
+            // 
+            // AddressLine_2
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddressLine_2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.AddressLine_2.HeaderText = "Address Line 2";
+            this.AddressLine_2.Name = "AddressLine_2";
+            // 
+            // TeleNo
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeleNo.DefaultCellStyle = dataGridViewCellStyle7;
+            this.TeleNo.HeaderText = "Tele No";
+            this.TeleNo.Name = "TeleNo";
             // 
             // frmCustomerRegistering
             // 
@@ -424,9 +451,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dGVCustomerDetails)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVCustomerDetails)).EndInit();
             this.ResumeLayout(false);
 
         }
