@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSubCategoryAdd));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbTitle = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dGVSubCatDetails = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -42,9 +45,11 @@
             this.cmbBoxMainCategory = new System.Windows.Forms.ComboBox();
             this.pnPassword = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVSubCatDetails)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -81,14 +86,26 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Sub Category Details";
             // 
-            // dataGridView1
+            // dGVSubCatDetails
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(370, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(485, 605);
-            this.dataGridView1.TabIndex = 5;
+            this.dGVSubCatDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVSubCatDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGVSubCatDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVSubCatDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CatName,
+            this.SubName});
+            this.dGVSubCatDetails.Location = new System.Drawing.Point(370, 3);
+            this.dGVSubCatDetails.Name = "dGVSubCatDetails";
+            this.dGVSubCatDetails.RowTemplate.Height = 24;
+            this.dGVSubCatDetails.Size = new System.Drawing.Size(485, 605);
+            this.dGVSubCatDetails.TabIndex = 5;
             // 
             // panel3
             // 
@@ -181,11 +198,25 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dGVSubCatDetails);
             this.panel2.Location = new System.Drawing.Point(7, 103);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(860, 614);
             this.panel2.TabIndex = 1;
+            // 
+            // CatName
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CatName.DefaultCellStyle = dataGridViewCellStyle2;
+            this.CatName.HeaderText = "Main Category Name";
+            this.CatName.Name = "CatName";
+            // 
+            // SubName
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.SubName.HeaderText = "Sub Category Name";
+            this.SubName.Name = "SubName";
             // 
             // frmSubCategoryAdd
             // 
@@ -200,7 +231,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVSubCatDetails)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -213,7 +244,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbTitle;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGVSubCatDetails;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
@@ -223,5 +254,7 @@
         private System.Windows.Forms.ComboBox cmbBoxMainCategory;
         private System.Windows.Forms.Panel pnPassword;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CatName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubName;
     }
 }

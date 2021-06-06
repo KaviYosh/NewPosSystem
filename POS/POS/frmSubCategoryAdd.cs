@@ -24,6 +24,7 @@ namespace POS
         {
             InitializeComponent();
             loadMainCategorydetails();
+            loadAllSubCategoryDetails(null);
         }
 
         private void cmbBoxMainCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -33,7 +34,61 @@ namespace POS
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            /// Create By: Kavinda Yoshana
+            /// Create Date : 2021/06/6
+            /// Des : Sub Category insert to data based function
 
+            try
+            {
+                //Open Connection
+                con.Open();
+
+                //Start Sql Transaction Block
+                SqlTransaction trans = con.BeginTransaction();
+
+                if (txtSubCatName.Text != "" && cmbBoxMainCategory.SelectedValue != null)
+                {
+                    //get Form  details for insert
+                    subCatMaster.MainCatID = cmbBoxMainCategory.SelectedValue.ToString();
+                    subCatMaster.SubName = txtSubCatName.Text.Trim();
+                    subCatMaster.Active = 1;
+                    subCatMaster.CreatedOn = DateTime.Now;
+                    subCatMaster.CreatedBy = 1;
+
+                    //call insert function
+                    bool status = subCategoryDAL.InsertSubCatDetails(subCatMaster, con, trans);
+                    if (status == true)
+                    {
+                        //commit sql transaction
+                        trans.Commit();
+                        MessageBox.Show("Sub category Details Saved Successfully ", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        //rallback sql transaction
+                        trans.Rollback();
+                        MessageBox.Show("Saved Failed. Retry again.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    //clear already filled data
+                    Clear();
+
+                    //load data to a grid view user can confirm his data insert or no
+                    loadAllSubCategoryDetails(null);
+
+                    //close connection
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill all the fields.", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public void loadMainCategorydetails()
         {
@@ -61,6 +116,47 @@ namespace POS
             {
                 throw ex;
             }
+        }
+
+        public void loadAllSubCategoryDetails(string subCatName)
+        {
+            /// Create By: Kavinda Yoshana
+            /// Create Date : 2021/05/20
+            /// Des : load supplier details to grid view
+
+            try
+            {
+                DataTable dtCustomer = subCategoryDAL.getSubCategoryDetails(subCatName);
+
+                //clear gridview records
+                dGVSubCatDetails.Rows.Clear();
+
+                if (dtCustomer.Rows.Count > 0)
+                {
+                    for (int count = 0; count < dtCustomer.Rows.Count; count++)
+                    {
+                        //add rows to gridview
+                        dGVSubCatDetails.Rows.Add();
+                        dGVSubCatDetails.Rows[count].Cells["CatName"].Value = dtCustomer.Rows[count]["CatName"].ToString();
+                        dGVSubCatDetails.Rows[count].Cells["SubName"].Value = dtCustomer.Rows[count]["SubName"].ToString();                        
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void Clear()
+        {
+            /// Create By: Kavinda Yoshana
+            /// Create Date : 2021/06/06
+            /// Des : clear all textbox in form
+
+            txtSubCatName.Text = "";
+            cmbBoxMainCategory.Text = "";
+            
         }
     }
 }
