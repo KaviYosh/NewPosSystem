@@ -16,13 +16,14 @@ namespace POS
         {
             InitializeComponent();
         }
+        
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void frmUserRegistering_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
@@ -31,7 +32,7 @@ namespace POS
             catch (Exception ex)
             {
 
-                throw ex;
+                throw;
             }
         }
     }
