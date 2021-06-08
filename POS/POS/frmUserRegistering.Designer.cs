@@ -45,7 +45,7 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.lblUserRole = new System.Windows.Forms.Label();
@@ -157,7 +157,7 @@
             this.panel11.Controls.Add(this.panel16);
             this.panel11.Controls.Add(this.lblUserName);
             this.panel11.Controls.Add(this.comboBox1);
-            this.panel11.Controls.Add(this.button1);
+            this.panel11.Controls.Add(this.btnSave);
             this.panel11.Controls.Add(this.button2);
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Controls.Add(this.lblUserRole);
@@ -266,18 +266,17 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(330, 30);
             this.comboBox1.TabIndex = 12;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(305, 337);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 52);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSave.Location = new System.Drawing.Point(305, 337);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(113, 52);
+            this.btnSave.TabIndex = 16;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // button2
             // 
@@ -664,6 +663,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmUserRegistering";
             this.Text = "User Registering";
+            this.Load += new System.EventHandler(this.frmUserRegistering_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).EndInit();
@@ -711,7 +711,7 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label lblUserHomeTeleNo;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label lblUserRole;
