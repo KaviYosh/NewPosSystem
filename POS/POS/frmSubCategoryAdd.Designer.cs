@@ -36,6 +36,8 @@
             this.pbTitle = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.dGVSubCatDetails = new System.Windows.Forms.DataGridView();
+            this.CatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -45,8 +47,6 @@
             this.cmbBoxMainCategory = new System.Windows.Forms.ComboBox();
             this.pnPassword = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.CatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVSubCatDetails)).BeginInit();
@@ -106,6 +106,20 @@
             this.dGVSubCatDetails.RowTemplate.Height = 24;
             this.dGVSubCatDetails.Size = new System.Drawing.Size(485, 605);
             this.dGVSubCatDetails.TabIndex = 5;
+            // 
+            // CatName
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CatName.DefaultCellStyle = dataGridViewCellStyle2;
+            this.CatName.HeaderText = "Main Category Name";
+            this.CatName.Name = "CatName";
+            // 
+            // SubName
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.SubName.HeaderText = "Sub Category Name";
+            this.SubName.Name = "SubName";
             // 
             // panel3
             // 
@@ -203,20 +217,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(860, 614);
             this.panel2.TabIndex = 1;
-            // 
-            // CatName
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CatName.DefaultCellStyle = dataGridViewCellStyle2;
-            this.CatName.HeaderText = "Main Category Name";
-            this.CatName.Name = "CatName";
-            // 
-            // SubName
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubName.DefaultCellStyle = dataGridViewCellStyle3;
-            this.SubName.HeaderText = "Sub Category Name";
-            this.SubName.Name = "SubName";
             // 
             // frmSubCategoryAdd
             // 
