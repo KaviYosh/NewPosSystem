@@ -41,7 +41,7 @@ namespace BLL.API
             get { return _createdBy; }
             set { _createdBy = value; }
         }
-        public int Status
+        public int Active
         {
             get { return _status; }
             set { _status = value; }

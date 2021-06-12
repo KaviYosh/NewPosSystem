@@ -17,6 +17,7 @@ namespace DAL
             /// Create By: Kavinda Yoshana
             /// Create Date : 2021/06/04
             /// Des : Main category details select query to combo box
+
             try
             {
                 DataTable dt = new DataTable();
@@ -38,6 +39,7 @@ namespace DAL
             /// Create By: Kavinda Yoshana
             /// Create Date : 2021/06/06
             /// Des : grid view load select query
+
             try
             {
                 DataTable dt = new DataTable();

@@ -52,6 +52,7 @@
             this.panel1.Controls.Add(this.PBUserLogin);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
+            this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.panel1.Size = new System.Drawing.Size(422, 187);
             this.panel1.TabIndex = 0;
             // 
@@ -63,7 +64,7 @@
             this.lblshopSecondName.ForeColor = System.Drawing.Color.White;
             this.lblshopSecondName.Location = new System.Drawing.Point(251, 45);
             this.lblshopSecondName.Name = "lblshopSecondName";
-            this.lblshopSecondName.Size = new System.Drawing.Size(0, 41);
+            this.lblshopSecondName.Size = new System.Drawing.Size(0, 40);
             this.lblshopSecondName.TabIndex = 2;
             // 
             // lblShopName

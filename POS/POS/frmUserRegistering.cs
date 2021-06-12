@@ -32,7 +32,7 @@ namespace POS
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
     }
